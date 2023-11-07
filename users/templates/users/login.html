@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="row mt-4">
+        <div class="col-md-4 offset-md-4 border border-2 rounded-3">
+            <h1 class="form-legend mt-2">Login</h1>
+            <hr/>
+            <form action="" method="POST" class="mt-2">
+                {{ form|crispy }}
+                <button type="button" class="btn btn-outline-success">Login</button>
+            </form>
+            <hr/>
+            <p class="muted-text">Don&apos;t have an Account? <a href="{% url 'signup' %}" class="link">Sign Up Here</a></p>
+        </div>
+    </div>
+
+{% endblock %}
